@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdulrahman Dapper - Portfolio</title>
+  <style>
+    /* Reset */
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f172a;
+      color: #f1f5f9;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #1e293b;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {font-size: 2.5rem; color: #38bdf8;}
+    header p {font-size: 1.2rem; color: #e2e8f0;}
+
+    nav {
+      background: #0f172a;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: #38bdf8;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {color: #fbbf24;}
+
+    section {padding: 3rem 2rem; max-width: 1000px; margin: auto;}
+
+    h2 {
+      color: #38bdf8;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      border-bottom: 2px solid #334155;
+      padding-bottom: 0.5rem;
+    }
+
+    .skills, .contact {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+    .card:hover {transform: translateY(-5px);}
+
+    .contact a {
+      display: block;
+      color: #38bdf8;
+      text-decoration: none;
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background: #1e293b;
+      padding: 1rem;
+      text-align: center;
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+    .ci{
+        clip-path: circle(50% at 50% 50%);
+        width: 200px;
+        height: 200px;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Abdulrahman Abubakar Dapper</h1>
+    <p>Cybersecurity Enthusiast | Web Developer</p>
+  </header>
+
+  <nav>
+    <a href="#bio">Biography</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="bio">
+    <h2>Biography</h2>
+        <img src="./image/1000033898 (1).jpg" class="ci" alt="">
+    <p><strong>Early Life & Education:</strong>Abdulrahman Abubakar Dapper, born on June 15, 2005, is a Nigerian cybersecurity enthusiast. He is the son of Abubakar Inuwa Adamu (father) and Maryam Abubakar Hajiya (mother). He began his educational journey at Solid Foundation Nursery and Primary School, Lafia, where he laid the groundwork for his future academic pursuits. He then attended Command Science Secondary School, Lafia, a prestigious institution run by the Nigerian Army. After completing his secondary education, he pursued higher studies in cybersecurity at Federal University of Lafia (FULafia).</p>
+    <br><p><strong>Career Interests:</strong> Dapper is passionate about cybersecurity, particularly in the finance sector. He aspires to become a cybersecurity consultant, helping organizations protect themselves against cyber threats.</p><br>
+    <p><strong>Personality:</strong>Dapper is a curious and adaptable individual, characteristic of his Gemini zodiac sign. He enjoys learning about new technologies and staying updated on the latest cybersecurity trends.
+
+ </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>HTML, CSS, JavaScript, PHP, SQL</p>
+      </div>
+      <div class="card">
+        <h3>Operating Systems</h3>
+        <p>Windows OS, macOS, Kali Linux</p>
+      </div>
+      <div class="card">
+        <h3>Cybersecurity</h3>
+        <p>Threat analysis, Security best practices, Finance security</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <div class="card">
+        <p>Email: <a href="mailto:dappers_one@proton.me">dappers_one@proton.me</a></p>
+        <p>Phone: <a href="tel:+2347015597193">+2347015597193</a></p>
+        <p>Facebook: <a href="https://facebook.com">Abdulrahman Abubakar Däppër</a></p>
+        <p>Instagram: <a href="https://instagram.com">@Abdulrahman Abubakar Dapper</a></p>
+        <p>TikTok: <a href="https://tiktok.com">dev_dapper</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Abdulrahman Dapper. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
