@@ -1,158 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abdulrahman Dapper - Portfolio</title>
-  <style>
-    /* Reset */
-    * {margin: 0; padding: 0; box-sizing: border-box;}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdulrahman Dapper | Cybersecurity Portfolio</title>
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #0f172a;
-      color: #f1f5f9;
-      line-height: 1.6;
-    }
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-    header {
-      background: #1e293b;
-      padding: 2rem;
-      text-align: center;
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-    header h1 {font-size: 2.5rem; color: #38bdf8;}
-    header p {font-size: 1.2rem; color: #e2e8f0;}
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #020617, #0f172a, #1e293b);
+            color: #fff;
+            line-height: 1.7;
+        }
 
-    nav {
-      background: #0f172a;
-      padding: 1rem;
-      text-align: center;
-    }
-    nav a {
-      color: #38bdf8;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {color: #fbbf24;}
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(2, 6, 23, 0.85);
+            backdrop-filter: blur(15px);
+            padding: 20px;
+            z-index: 1000;
+        }
 
-    section {padding: 3rem 2rem; max-width: 1000px; margin: auto;}
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 30px;
+        }
 
-    h2 {
-      color: #38bdf8;
-      margin-bottom: 1rem;
-      font-size: 2rem;
-      border-bottom: 2px solid #334155;
-      padding-bottom: 0.5rem;
-    }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
 
-    .skills, .contact {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
+        nav a:hover {
+            color: #38bdf8;
+        }
 
-    .card {
-      background: #1e293b;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      transition: transform 0.3s;
-    }
-    .card:hover {transform: translateY(-5px);}
+        /* Header */
+        header {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+        }
 
-    .contact a {
-      display: block;
-      color: #38bdf8;
-      text-decoration: none;
-      margin: 0.5rem 0;
-      font-size: 1.1rem;
-    }
+        .profile-img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #38bdf8;
+            box-shadow: 0 0 40px rgba(56, 189, 248, 0.5);
+            margin-bottom: 30px;
+        }
 
-    footer {
-      background: #1e293b;
-      padding: 1rem;
-      text-align: center;
-      color: #94a3b8;
-      font-size: 0.9rem;
-    }
-    .ci{
-        clip-path: circle(50% at 50% 50%);
-        width: 200px;
-        height: 200px;
-    }
+        header h1 {
+            font-size: 3rem;
+            color: #38bdf8;
+        }
 
-  </style>
+        header p {
+            font-size: 1.3rem;
+            color: #cbd5e1;
+            margin-top: 10px;
+        }
+
+        .buttons {
+            margin-top: 35px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            margin: 10px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.4s;
+        }
+
+        .primary {
+            background: #38bdf8;
+            color: #fff;
+        }
+
+        .primary:hover {
+            background: #0ea5e9;
+            transform: translateY(-5px);
+        }
+
+        .outline {
+            border: 2px solid #38bdf8;
+            color: #38bdf8;
+        }
+
+        .outline:hover {
+            background: #38bdf8;
+            color: white;
+        }
+
+        /* Sections */
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 100px 30px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #38bdf8;
+            margin-bottom: 50px;
+        }
+
+        /* Cards */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(56, 189, 248, 0.3);
+        }
+
+        /* Skills */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-card {
+            text-align: center;
+        }
+
+        .skill-card h3 {
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+
+        /* Contact */
+        .contact-card p {
+            margin: 15px 0;
+        }
+
+        .contact-card a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .contact-card a:hover {
+            color: #38bdf8;
+        }
+
+        /* Footer */
+        footer {
+            background: #020617;
+            text-align: center;
+            padding: 30px;
+            color: #94a3b8;
+        }
+
+        /* Mobile */
+        @media(max-width:768px) {
+
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+
+            .profile-img {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <header>
-    <h1>Abdulrahman Abubakar Dapper</h1>
-    <p>Cybersecurity Enthusiast | Web Developer</p>
-  </header>
 
-  <nav>
-    <a href="#bio">Biography</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-  <section id="bio">
-    <h2>Biography</h2>
-        <img src="./image/1000033898 (1).jpg" class="ci" alt="">
-    <p><strong>Early Life & Education:</strong>Abdulrahman Abubakar Dapper, born on June 15, 2005, is a Nigerian cybersecurity enthusiast. He is the son of Abubakar Inuwa Adamu (father) and Maryam Abubakar Hajiya (mother). He began his educational journey at Solid Foundation Nursery and Primary School, Lafia, where he laid the groundwork for his future academic pursuits. He then attended Command Science Secondary School, Lafia, a prestigious institution run by the Nigerian Army. After completing his secondary education, he pursued higher studies in cybersecurity at Federal University of Lafia (FULafia).</p>
-    <br><p><strong>Career Interests:</strong> Dapper is passionate about cybersecurity, particularly in the finance sector. He aspires to become a cybersecurity consultant, helping organizations protect themselves against cyber threats.</p><br>
-    <p><strong>Personality:</strong>Dapper is a curious and adaptable individual, characteristic of his Gemini zodiac sign. He enjoys learning about new technologies and staying updated on the latest cybersecurity trends.
+    <!-- Hero Section -->
+    <header>
 
- </p>
-  </section>
+        <!-- Replace with your image -->
+        <img src="./image/1000033898 (1).jpg" alt="Abdulrahman Dapper" class="profile-img">
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="card">
-        <h3>Web Development</h3>
-        <p>HTML, CSS, JavaScript, PHP, SQL</p>
-      </div>
-      <div class="card">
-        <h3>Operating Systems</h3>
-        <p>Windows OS, macOS, Kali Linux</p>
-      </div>
-      <div class="card">
-        <h3>Cybersecurity</h3>
-        <p>Threat analysis, Security best practices, Finance security</p>
-      </div>
-    </div>
-  </section>
+        <h1>Abdulrahman Abubakar Adamu</h1>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact">
-      <div class="card">
-        <p>Email: <a href="mailto:dappers_one@proton.me">dappers_one@proton.me</a></p>
-        <p>Phone: <a href="tel:+2347015597193">+2347015597193</a></p>
-        <p>Facebook: <a href="https://facebook.com">Abdulrahman Abubakar Däppër</a></p>
-        <p>Instagram: <a href="https://instagram.com">@Abdulrahman Abubakar Dapper</a></p>
-        <p>TikTok: <a href="https://tiktok.com">dev_dapper</a></p>
-      </div>
-    </div>
-  </section>
+        <p>
+            Penetration tester |
+            Frontend Web Developer |
+            Cybersecurity Enthusiast
+        </p>
 
-  <footer>
-    <p>© 2025 Abdulrahman Dapper. All rights reserved.</p>
-  </footer>
+        <div class="buttons">
+            <a href="#contact" class="btn primary">Contact Me</a>
+            <a href="#about" class="btn outline">Learn More</a>
+        </div>
 
-  <script>
-    // Smooth Scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
+    </header>
+
+    <!-- About -->
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <div class="card">
+            <p>
+                I am <strong>Abdulrahman Abubakar Adamu (Dapper)</strong>,
+                born on <strong>15 June 2005</strong>, a Nigerian
+                cybersecurity enthusiast and web developer.
+
+                I began my educational journey at
+                <strong>Solid Foundation Nursery and Primary School, Lafia</strong>,
+                continued at
+                <strong>Command Science Secondary School, Lafia,
+                </strong>
+                a prestigious institution run by the Nigerian Army.
+                and I am currently studying
+                <strong>Cybersecurity at the Federal University of Lafia (FULafia)</strong>.
+            </p>
+
+            <br>
+
+            <p>
+                My passion lies in cybersecurity, especially within the
+                financial sector. I aspire to become a professional
+                cybersecurity consultant, helping organizations defend
+                themselves against cyber threats and build secure digital systems.
+            </p>
+
+            <br>
+
+            <p>
+                I enjoy learning new technologies, participating in security
+                challenges, and staying updated with the latest cybersecurity trends.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <h2>Skills</h2>
+
+        <div class="skills">
+
+            <div class="card skill-card">
+                <h3>🌐 Web Development</h3>
+                <p>
+                    HTML5<br>
+                    CSS3<br>
+                    JavaScript<br>
+                    PHP<br>
+                    SQL
+                </p>
+            </div>
+
+            <div class="card skill-card">
+                <h3>💻 Operating Systems</h3>
+                <p>
+                    Windows OS<br>
+                    macOS<br>
+                    Kali Linux<br>
+                    Linux Administration
+                </p>
+            </div>
+
+            <div class="card skill-card">
+                <h3>🔒 Cybersecurity</h3>
+                <p>
+                    Threat Analysis<br>
+                    Security Best Practices<br>
+                    Vulnerability Assessment<br>
+                    Financial Security
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+
+        <h2>Contact Me</h2>
+
+        <div class="card contact-card">
+
+            <p>
+                📧 Email:
+                <a href="mailto:dappers_one@proton.me">
+                    dappers_one@proton.me
+                </a>
+            </p>
+
+            <p>
+                📞 Phone:
+                <a href="tel:+2347015597193">
+                    +2347015597193
+                </a>
+            </p>
+
+            <p>
+                📘 Facebook:
+                <a href="https://www.facebook.com/profile.php?id=100056873388989">
+                    Abdulrahman Abubakar Däppër
+                </a>
+            </p>
+
+            <p>
+                📸 Instagram:
+                <a href="https://www.instagram.com/dapper_one?igsh=MTFsZmUyZWZzeW50Yw==">
+                    @dappers_one
+                </a>
+            </p>
+
+            <p>
+                🎵 TikTok:
+                <a href="https://tiktok.com/@dev_dapper">
+                    @dev_dapper
+                </a>
+            </p>
+
+            <p>
+                💼 LinkedIn:
+                <a href="https://www.linkedn.com/in/abubakar-abdurahman-adamu-61b794306">
+                    Abdulrahman Abubakar Dapper
+                </a>
+            </p>
+
+
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 Abdulrahman Dapper. All Rights Reserved.
+    </footer>
+
 </body>
+
 </html>
